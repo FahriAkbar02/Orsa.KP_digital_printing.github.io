@@ -17,15 +17,17 @@
       <div class="card-body">
       <ul class="list-group list-group-flush">
     <li class="list-group-item">
-        <h4> <?= user()->username; ?></h4>
+        <h4> <?= $user->username; ?></h4>
     </li>
-    <?php if(user()->fullname) : ?>
+    <?php if($user->fullname) : ?>
     <li class="list-group-item">
-       <?= user()->fullname; ?>
+       <?= $user->fullname; ?>
     </li>
     <?php endif;?>
-    <li class="list-group-item"><?= user()->email; ?></li>
-    <li><span class="badge badge-<?= (user()->name == 'admin') ? 'success': 'warning'?>"><?= $user->name; ?></span>
+    <li class="list-group-item">
+      <?= $user->email; ?></li>
+    <li class="list-group-item">
+      <span class="badge badge-<?= ($user->name == 'admin') ? 'success': 'warning'?>"><?= $user->name; ?></span>
 </li>
 <li class="list-group-item">
     <small><a href="<?= base_url('admin') ?>">&laquo; back to user list</a></small></li>

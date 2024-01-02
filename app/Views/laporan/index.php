@@ -33,23 +33,28 @@
                         <th>Ukuran</th>
                         <th>Jumlah</th>
                         <th>No.Tlpn / WhatsApp</th>
+                        <th>Action</th>
 
                     </tr>
                 </thead>
                
                 <tbody>
                  <?php $i = 1; ?>
-                    <?php if (!empty($post1)) : ?>
-                        <?php foreach ($post1 as $post) : ?>
+                    <?php if (!empty($posts )) : ?>
+                        <?php foreach ($posts  as $customer) : ?>
             <tr>
                 <th scope="row"><?= $i++; ?></th>
-                <td><?php echo $post['id_pelanggan']; ?></td>
-                <td><?php echo $post['tanggal']; ?></td>
-                <td><?php echo $post['nama_pelanggan']; ?></td>
-                <td><?php echo $post['jenis_produk']; ?></td>
-                <td><?php echo $post['ukuran']; ?></td>
-                <td><?php echo $post['jumlah']; ?></td>
-                <td><?php echo $post['no_tlpn']; ?></td>
+                <td><?= esc($customer['id_pelanggan']); ?></td>
+                <td><?= esc($customer['tanggal']); ?></td>
+                <td><?= esc($customer['nama_pelanggan']); ?></td>
+                <td><?= esc($customer['jenis_produk']); ?></td>
+                <td><?= esc($customer['ukuran']); ?></td>
+                <td><?= esc($customer['jumlah']); ?></td>
+                <td><?= esc($customer['no_tlpn']); ?></td>
+                <td style="text-align: center;"><a class="btn btn-danger" 
+                href="<?= base_url('laporan/hapus/' . $customer['id']); ?>" 
+                onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</a>
+</td>
             </tr>
             <?php endforeach; ?>
                         <?php else : ?>
@@ -59,7 +64,7 @@
             </table>
         </div>
         <div class="card-body">
-                            <a  class="btn btn-info" onclick="window.print()" value="">Cetak Bukti</a>
+                            <a  class="btn btn-info " onclick="window.print()" value="">Cetak Bukti</a>
                         </div>
     </div>
 </div>

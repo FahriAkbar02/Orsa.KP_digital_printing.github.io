@@ -17,13 +17,10 @@ $routes->get('/user', 'User::index');
 
 $routes->get('/note', 'DataTableController::create');
 $routes->post('/simpan', 'DataTableController::store');
-
+$routes->get('/laporan/hapus/(:num)', 'DataTableController::delete/$1');
 
 $routes->get('/laporan', 'DataTableController::index');
 $routes->get('/laporan/cetak', 'Cetak::index');
-
-
-
 $routes->get('/data', 'DataTableController::data');
 
 
