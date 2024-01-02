@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+
+@import url(css/animate.css);
+@import url(css/flaticon.css);
+@import url(css/font-awesome.min.css);
+
+.padding_infor_info {
+    padding: 35px 35px;
+    float: left;
+    width: 100%;
+}
+
+.heading1 h2 {
+    line-height: normal;
+    font-size: 21px;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 0;
+    color: #15283c;
+    letter-spacing: 0px;
+}
+
+.page_title h2 {
+    margin-top: 0;
+    margin-left: -40px;
+    margin-right: -40px;
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+    color: #15283c;
+}
+
+.graph_head {
+    padding: 18px 25px 15px;
+    float: left;
+    width: 100%;
+    border-bottom: solid #f3f3f3 2px;
+}
+.hidden {
+    display: none;
+}
+.heading1 {
+   
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.graph_head .heading1 {
+    float: left;
+    padding: 0;
+    width: auto;
+}
+
+.heading2 {
+    background: #fff;
+    padding: 15px 25px;
+    margin: 20px 0 0 0;
+    border-bottom: solid #ff5722 2px;
+}
+ .sidebar-brand-icon {
+    display: none;
+    padding: 10px 10px;
+    display: flex;
+}
+ img {
+    border-radius: 100% 100%;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+/*------------------------------------------------------------------
+    7. Table style
+-------------------------------------------------------------------*/
+
+.table_format.strp table {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    color: #666;
+}
+
+.table_format.strp thead th {
+    background: #15283c;
+    border: none;
+    color: #fff;
+    vertical-align: middle;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1;
+    padding: 22px 40px;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.table_format.strp tbody th,
+.table_format.strp tbody td {
+    font-size: 15px;
+    padding: 20px 40px;
+    vertical-align: middle;
+    font-weight: 400;
+    transform: capitalize;
+    line-height: 1;
+    width: white-space;
+}
+
+.top_countries_section {
+    background-color: #ff4748;
+    border-radius: 8px;
+    padding: 25px 40px;
+    background-image: -webkit-linear-gradient(90deg, #396afc 0%, #2948ff 100%);
+}
+
+.area_chart {
+    padding: 30px 0 30px 30px;
+    width: 97%;
+}
+
+.margin_bottom_30 {
+    margin-bottom: 30px;
+}
+
+.white_shd {
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+.dark_bg {
+    background: #214162;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+.dark_bg .graph_head {
+    border-bottom: solid rgba(255, 255, 255, .1) 2px;
+}
+
+.dark_bg h2 {
+    color: #fff;
+}

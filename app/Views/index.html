@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukti Transaksi Digital Printing</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .receipt-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .company-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt-container">
+        <div class="company-info">
+            <h2>Nama Perusahaan</h2>
+            <p>Alamat Perusahaan | No. Telepon</p>
+        </div>
+
+        <h4>Bukti Transaksi</h4>
+        <p><strong>Nomor Transaksi:</strong> <span id="transaksiNo">123456</span></p>
+        <p><strong>Tanggal:</strong> <span id="transaksiDate">2023-12-31</span></p>
+        <hr>
+
+        <h5>Informasi Pelanggan</h5>
+        <p><strong>Nama:</strong> <span id="customerName">Nama Pelanggan</span></p>
+        <p><strong>Alamat:</strong> <span id="customerAddress">Alamat Pelanggan</span></p>
+        <p><strong>No. Telepon:</strong> <span id="customerPhone">081234567890</span></p>
+        <hr>
+
+        <h5>Rincian Pesanan</h5>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Jenis Produk</th>
+                    <th>Jumlah</th>
+                    <th>Harga</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="orderDetails">
+                <!-- Order details will be inserted here -->
+            </tbody>
+        </table>
+
+        <div class="text-right">
+            <p><strong>Subtotal:</strong> <span id="subtotalPrice">Rp0</span></p>
+            <p><strong>Pajak:</strong> <span id="taxPrice">Rp0</span></p>
+            <p><strong>Total:</strong> <span id="totalPrice">Rp0</span></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript untuk mengisi data transaksi
+        // Contoh: Mengisi data ke tabel rincian pesanan
+        // Anda dapat mengganti ini dengan data aktual dari server atau form Anda
+        $(document).ready(function() {
+            var orderData = [
+                {product: 'Cetak Banner', quantity: 2, price: 100000},
+                // Tambahkan lebih banyak data pesanan di sini
+            ];
+
+            var subtotal = 0;
+            orderData.forEach(function(item) {
+                var itemTotal = item.quantity * item.price;
+                subtotal += itemTotal;
+                $('#orderDetails').append(
+                    `<tr>
+                        <td>${item.product}</td>
+                        <td>${item.quantity}</td>
+                        <td>Rp${item.price}</td>
+                        <td>Rp${itemTotal}</td>
+                    </tr>`
+                );
+            });
+
+            var tax = subtotal * 0.1; // Pajak 10%
+            var total = subtotal + tax;
+            $('#subtotalPrice').text(`Rp${subtotal}`);
+            $('#taxPrice').text(`Rp${tax}`);
+            $('#totalPrice').text(`Rp${total}`);
+        });
+    </script>
+</body>
+</html>
