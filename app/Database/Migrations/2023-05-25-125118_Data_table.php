@@ -43,7 +43,7 @@ class Data_Customer extends Migration
                 'constraint'     => '12',
             ],
             'tanggal'          => [
-                'type'           => 'VARCHAR',
+                'type'           => 'DATE',
                 'constraint'     => '110',
             ],
             'created_at' => [

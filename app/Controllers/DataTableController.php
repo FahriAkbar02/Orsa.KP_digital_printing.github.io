@@ -7,6 +7,8 @@ use App\Models\Data_Customer;
 
 class DataTableController extends BaseController
 {
+
+//Fungsi Crud Data Pelanggan//
     public function index()
     {
         $pelangganModel = new Data_Customer();
@@ -66,7 +68,7 @@ class DataTableController extends BaseController
             'jenis' => $this->request->getPost('jenis'),
             'ukuran' => $this->request->getPost('ukuran'),
             'jumlah' => $this->request->getPost('jumlah'),
-            'tanggal' => $this->request->getPost('tanggal'),
+            'tanggal' => $this->request->getPost('tanggal' ),
             'no_tlpn' => $this->request->getPost('no_tlpn'),
         ];
 
@@ -84,9 +86,32 @@ class DataTableController extends BaseController
             return redirect()->to('/pelanggan')->with('error', 'Data Pelanggan tidak ditemukan.');
         }
     }
-    public function data()
+
+  
+    public function printTransaction($id)
     {
-      
-            return view('data_pelanggan/data');
+        $model = new Data_Customer();
+
+        // Ambil data transaksi dari database berdasarkan id
+        $data['transaction'] = $model->find($id);
+        // Tampilkan view untuk print transaksi dengan data yang diambil
+        return view('data_pelanggan/print', $data);
     }
+
+
+  //View Menu data
+  public function data()
+  {
+    
+          return view('data_pelanggan/data');
+  }
+
+
+
+
+
+
+
+
+
 }
