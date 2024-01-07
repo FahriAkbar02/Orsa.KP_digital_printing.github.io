@@ -1,6 +1,6 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://www.instagram.com/temmalusa_art_papua/">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <img class="img-responsive" src="<?= base_url()?>/img/logo/T-Art Papua.png" alt="">
                 </div>

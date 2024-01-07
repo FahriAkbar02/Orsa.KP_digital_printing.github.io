@@ -59,7 +59,11 @@ use PhpParser\Node\Stmt\Echo_;
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website <?= date('Y')?></span>
+                        <a href="https://www.instagram.com/fahri_akbarras/"></a>
+                        <span>Copyright &copy; <?= date('Y')?> Design By <i class=""> @fahri_akbarras</span>
+                        <a href="https://www.instagram.com/fahri_akbarras/" class="text-balck me-4">
+                          <i class="fab fa-instagram"></i>
+                         </a>
                     </div>
                 </div>
             </footer>
