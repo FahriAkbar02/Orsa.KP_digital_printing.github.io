@@ -57,11 +57,10 @@ use PhpParser\Node\Stmt\Echo_;
             <footer class="sticky-footer bg-white no-print">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <a href="https://www.instagram.com/fahri_akbarras/"></a>
-                        <span>Copyright &copy; <?= date('Y') ?> Design By <i class=""> @fahri_akbarras</span>
-                        <a href="https://www.instagram.com/fahri_akbarras/" class="text-balck me-4">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                        <span>Copyright &copy; <?= date('Y') ?> Design By
+                            <a href="https://www.instagram.com/fahri_akbarras/" class="text-balck me-4">
+                                <i class="fab fa-instagram"> @fahri_akbarras</i>
+                            </a>
                     </div>
                 </div>
             </footer>

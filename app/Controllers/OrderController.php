@@ -31,7 +31,7 @@ class OrderController extends BaseController
                     'item_name' => $order['item_name'],
                     'jenis_item' => $order['jenis_item'],
                     'size' => $order['size'],
-                    'no_tlpn' => $order['jenis_item'],
+                    'no_tlpn' => $order['no_tlpn'],
 
                     'jumlah' => 0,
                     'harga_satuan' => $order['price'],

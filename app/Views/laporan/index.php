@@ -15,7 +15,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="dataTable" cellspacing="0">
                 <thead style="text-align: center;">
                     <tr>
                         <th>ID Pelanggan</th>
@@ -58,7 +58,7 @@
             </table>
         </div>
         <div class="card-body">
-            <a class="btn btn-info no-print" href="<?= base_url('print_all/'); ?>" value="">Buat Laporan</a>
+            <a class="btn btn-info no-print" href="<?= base_url('print_all/'); ?>" value=""><i class="fas fa-book"></i> Buat Laporan</a>
         </div>
     </div>
 

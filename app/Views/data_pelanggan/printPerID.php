@@ -30,7 +30,7 @@
                     <h4>Detail Transaksi</h4>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered" cellspacing="0">
                                 <thead style="text-align: center;">
                                     <tr>
                                         <th>Item</th>
@@ -55,20 +55,14 @@
                                 </tbody>
                             </table>
                         </div>
+                        <h5>Terima kasih telah berbelanja dengan kami!</h5>
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary no-print" onclick="window.print()">Cetak Bukti</button>
                     </div>
                 </div>
             </div>
-
-            <h5>Terima kasih telah berbelanja dengan kami!</h5>
-
-
         </div>
-
-        <button class="btn btn-primary no-print" onclick="window.print()">Cetak Nota</button>
     </div>
-</div>
-
-
-
-<!-- External Scripts -->
-<?= $this->endSection('page-content'); ?>
+    <!-- External Scripts -->
+    <?= $this->endSection('page-content'); ?>

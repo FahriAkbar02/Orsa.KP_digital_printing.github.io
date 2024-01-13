@@ -14,15 +14,11 @@
             <i class="fas fa-solid fa-plus"></i>
             <span>Tambah Pesanan</span></a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('data') ?>">
-            <i class="fas fa-sticky-note"></i>
-            <span>data</span></a>
-    </li>
+
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('laporan') ?>">
-            <i class="fas fa-book"></i>
-            <span>Laporan</span></a>
+            <i class="fas fa-sticky-note"></i>
+            <span>Data Pelanggan</span></a>
     </li>
 
 
