@@ -43,7 +43,7 @@
                                 <td><?= esc($customer['jenis_item']); ?></td>
                                 <td><?= esc($customer['size']); ?></td>
                                 <td><?= esc($customer['jumlah']); ?></td>
-                                <td>Rp.<?= esc($customer['total_harga']) ?></td>
+                                <td>Rp. <?= number_format(esc($customer['total_harga']), 0, ',', '.'); ?></td>
                                 <td><?= esc($customer['no_tlpn']); ?></td>
                                 <td style="text-align: center;" class="no-print">
                                     <a class="btn btn-danger" href="<?= base_url('hapus/' . $customer['id']); ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"> <i class="fas fa-trash"></i></a>

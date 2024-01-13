@@ -45,12 +45,14 @@
                                         <td><?= $order['item_name'] ?? 'N/A' ?></td>
                                         <td><?= $order['size'] ?? 'N/A' ?></td>
                                         <td><?= $order['quantity'] ?? '0' ?></td>
-                                        <td>Rp. <?= $order['price'] ?? '0' ?></td>
-                                        <td>Rp. <?= $totalHarga ?? '0' ?></td>
+                                        <td>Rp. <?= isset($order['price']) ? number_format($order['price'], 0, ',', '.') : '0' ?></td>
+                                        <!-- Format total harga dengan pemisah ribuan -->
+                                        <td>Rp. <?= isset($totalHarga) ? number_format($totalHarga, 0, ',', '.') : '0' ?></td>
                                     </tr>
                                     <tr>
                                         <td colspan="4" class="text-right"><strong>Total Harga:</strong></td>
-                                        <td>Rp. <strong><?= $totalHarga ?? '0' ?></strong></td>
+                                        <td>Rp. <?= isset($totalHarga) ? number_format($totalHarga, 0, ',', '.') : '0' ?></td>
+
                                     </tr>
                                 </tbody>
                             </table>
