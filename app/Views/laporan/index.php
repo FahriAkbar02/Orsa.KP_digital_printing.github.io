@@ -63,12 +63,25 @@
             </table>
         </div>
         <div class="card-body">
-            <a class="btn btn-info no-print" href="<?= base_url('print_all/'); ?>" value=""><i class="fas fa-book"></i> Buat Laporan</a>
+            <table>
+                <thead>
+                    <th>Buat Laporan Per Hari/Bulan/Tahun</th>
+                    <th>:</th>
+                    <th> <a type="button" class="btn btn-info no-print" onclick="window.print()"><i class="fas fa-print"></i></a></th>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Buat Ringkasan Laporan Per Item</th>
+                        <th>:</th>
+                        <th> <a class="btn btn-info no-print" href="<?= base_url('print_all/'); ?>" value=""><i class="fas fa-print"></i></a></th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
     <script>
-        function myalert() {
-            alert("Akses, Di Butuhkan Login !!");
+        function printPage() {
+            window.print();
         }
     </script>
 </div>

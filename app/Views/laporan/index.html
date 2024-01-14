@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ringkasan Laporan Produk</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h2 class="text-center mb-4">Ringkasan Laporan Produk</h2>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nama Produk</th>
+            <th>Kategori</th>
+            <th>Harga Satuan</th>
+            <th>Harga Total</th>
+            <th>Banyak</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Contoh Data Produk -->
+          <?php foreach ($itemSummary as $itemName =>
+          $details) : ?>
+          <?php foreach ($posts  as $customer) : ?>
+          $details) : ?>
+          <tr>
+            <td>101</td>
+            <td><?= esc($customer['item_name']); ?></td>
+            <td><?= esc($customer['jenis_item']); ?></td>
+            <td>
+              Rp.
+              <?= isset($order['price']) ? number_format($order['price'], 0, ',', '.') : '0' ?>
+            </td>
+            <td>Rp.<?= number_format($details['harga_total'], 2, ',', '.'); ?></td>
+            <td><?= esc($details['jumlah']); ?></td>
+          </tr>
+          <?php endforeach; ?>
+          <?php endforeach; ?>
+          <tr>
+            <td>102</td>
+            <td>Produk B</td>
+            <td>Pakaian</td>
+            <td>Rp 150.000</td>
+            <td>100</td>
+          </tr>
+          <!-- Tambahkan data produk lainnya di sini -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

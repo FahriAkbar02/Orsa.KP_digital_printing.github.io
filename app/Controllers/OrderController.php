@@ -117,22 +117,38 @@ class OrderController extends BaseController
 
         foreach ($orders as $order) {
             $itemName = $order['item_name'];
+            $orderDate = $order['created_at']; // Pastikan ini sesuai dengan format tanggal dari data Anda
 
             if (!isset($itemSummary[$itemName])) {
                 $itemSummary[$itemName] = [
+                    'jenis_item' => $itemName,
+                    'harga_satuan' => $order['price'],
                     'jumlah' => 0,
-                    'harga_total' => 0
+                    'harga_total' => 0,
+                    'details' => []
                 ];
             }
 
             $itemSummary[$itemName]['jumlah'] += $order['quantity'];
             $itemSummary[$itemName]['harga_total'] += $order['quantity'] * $order['price'];
+
+            // Inisialisasi detail jika belum ada
+            if (!isset($itemSummary[$itemName]['details'][$orderDate])) {
+                $itemSummary[$itemName]['details'][$orderDate] = [
+                    'jumlah' => 0,
+                    'harga_total' => 0
+                ];
+            }
+
+            $itemSummary[$itemName]['details'][$orderDate]['jumlah'] += $order['quantity'];
+            $itemSummary[$itemName]['details'][$orderDate]['harga_total'] += $order['quantity'] * $order['price'];
         }
 
-
         // Kirim data dan totalHarga ke view
-        return  view('data_pelanggan/print_all', ['itemSummary' => $itemSummary]);
+        return view('data_pelanggan/print_all', ['itemSummary' => $itemSummary]);
     }
+
+
 
     //View Menu data
     public function data()
