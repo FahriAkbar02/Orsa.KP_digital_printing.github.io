@@ -53,6 +53,10 @@ class OrderController extends BaseController
 
     public function store()
     {
+        $request = service('request');
+        $hargaFormatted = $request->getPost('price');
+        $harga = floatval(str_replace('.', '', $hargaFormatted));
+        $pelangganModel = new DP_Orders_item();
         $randomId = uniqid('TAP-');
         $data = [
             'id_pelanggan' => $randomId,
@@ -62,12 +66,10 @@ class OrderController extends BaseController
             'size' => $this->request->getPost('size'),
             'quantity' => $this->request->getPost('quantity'),
             'no_tlpn' => $this->request->getPost('no_tlpn'),
-            'price' => $this->request->getPost('price'),
+            'price' => $harga,
         ];
 
-        $pelangganModel = new DP_Orders_item();
         $pelangganModel->save($data);
-
         return redirect()->to('laporan')->with('success', 'Data pelanggan berhasil disimpan.');
     }
 

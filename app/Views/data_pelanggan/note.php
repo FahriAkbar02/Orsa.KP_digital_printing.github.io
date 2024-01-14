@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="price"> Harga Satuan:</label>
-                                        <input type="number" class="form-control" name="price" id="price" step="0.01" required>
+                                        <input type="text" class="form-control" name="price" id="price" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="no_tlpn">Kontak</label>
@@ -65,20 +65,20 @@
         </div>
     </div>
 </div>
-<script>
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-        e.preventDefault();
 
-        // Proses pengumpulan data form
-    });
-
-    function calculateTotal() {
-        var hargaSatuan = document.getElementById('harga_satuan').value;
-        var jumlah = document.getElementById('jumlah').value;
-        var total = hargaSatuan * jumlah;
-
-        document.getElementById('total').value = total.toFixed(2);
+<script type="text/javascript">
+    function formatNumberToIndonesianCurrency(value) {
+        return value.toString().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const priceInput = document.getElementById('price');
+
+        priceInput.addEventListener('input', function(e) {
+            const formattedValue = formatNumberToIndonesianCurrency(this.value);
+            this.value = formattedValue;
+        });
+    });
 </script>
 
 

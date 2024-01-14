@@ -37,7 +37,7 @@
                 <?php endif; ?>
                 <?php if (logged_in() == false) : ?>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" type="button" href="<?= url_to('user') ?>">
+                    <a class="dropdown-item" type="button" href="<?= url_to('login') ?>">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Login
                     </a>

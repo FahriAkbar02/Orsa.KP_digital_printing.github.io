@@ -21,10 +21,10 @@
                         <th>ID Pelanggan</th>
                         <th>Tanggal</th>
                         <th>Nama Pelanggan</th>
-                        <th>Item Cetak</th>
+                        <th>Order Cetak</th>
                         <th>Jenis Cetak</th>
-                        <th>Ukuran</th>
-                        <th>Jumlah</th>
+                        <th>Ukuran / Size</th>
+                        <th>Banyak</th>
                         <th>Total Harga</th>
                         <th>No.Tlpn / WhatsApp</th>
                         <th class="no-print">Action</th>
@@ -46,8 +46,13 @@
                                 <td>Rp. <?= number_format(esc($customer['total_harga']), 0, ',', '.'); ?></td>
                                 <td><?= esc($customer['no_tlpn']); ?></td>
                                 <td style="text-align: center;" class="no-print">
-                                    <a class="btn btn-danger" href="<?= base_url('hapus/' . $customer['id']); ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"> <i class="fas fa-trash"></i></a>
-                                    <a class="btn btn-primary " href="<?= base_url('printPerID/' . $customer['id']); ?>" onclick="return confirm(' Melakukan Cetak Bukti Transaksi?')"><i class="fa fa-print"></i></a>
+                                    <?php if (logged_in() == true) : ?>
+                                        <a class="btn btn-danger" href="<?= base_url('hapus/' . $customer['id']); ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"> <i class="fas fa-trash"></i></a>
+                                    <?php endif; ?>
+                                    <?php if (logged_in() == true) : ?>
+                                        <a class="btn btn-primary " href="<?= base_url('printPerID/' . $customer['id']); ?>" onclick="return confirm(' Melakukan Cetak Bukti Transaksi?')"><i class="fa fa-print"></i></a>
+                                    <?php endif; ?>
+
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -61,6 +66,10 @@
             <a class="btn btn-info no-print" href="<?= base_url('print_all/'); ?>" value=""><i class="fas fa-book"></i> Buat Laporan</a>
         </div>
     </div>
-
+    <script>
+        function myalert() {
+            alert("Akses, Di Butuhkan Login !!");
+        }
+    </script>
 </div>
 <?= $this->endSection('page-content'); ?>

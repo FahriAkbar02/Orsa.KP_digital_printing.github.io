@@ -11,6 +11,14 @@ class Home extends BaseController
 
         $data['post1'] = $postModel->findAll();
 
-        return view('user/index');
+        return view('data_pelanggan/note');
+    }
+    public function login()
+    {
+        $postModel = new \App\Models\DP_Orders_Item();
+
+        $data['post1'] = $postModel->findAll();
+
+        return view('auth/login');
     }
 }
