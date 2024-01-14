@@ -65,15 +65,10 @@
         <div class="card-body">
             <table>
                 <thead>
-                    <th>Buat Laporan Per Hari/Bulan/Tahun</th>
-                    <th>:</th>
-                    <th> <a type="button" class="btn btn-info no-print" onclick="window.print()"><i class="fas fa-print"></i></a></th>
-                </thead>
-                <thead>
                     <tr>
-                        <th>Buat Ringkasan Laporan Per Item</th>
-                        <th>:</th>
-                        <th> <a class="btn btn-info no-print" href="<?= base_url('print_all/'); ?>" value=""><i class="fas fa-print"></i></a></th>
+                        <th>
+                            <p><a class="btn btn-info no-print" href="<?= base_url('print_all/'); ?>" value="">Buat Ringkasan</i></a></p>
+                        </th>
                     </tr>
                 </thead>
             </table>

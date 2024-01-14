@@ -3,7 +3,7 @@
 <div>
     <div class="container-fluid">
         <div class="container mt-5">
-            <h2 class="mb-4">Ringkasan Laporan Produk</h2>
+            <h2 class="mb-4">Ringkasan Laporan Cetak</h2>
             <?php foreach ($itemSummary as $item) : ?>
                 <div class="card mb-3">
                     <div class="card-header">
@@ -78,11 +78,12 @@
                 </div>
 
             <?php endforeach; ?>
+            <div class="card-body">
+                <a type="button" class="btn btn-info no-print" onclick="window.print()">CETAK
+                    <i class="fas fa-print"></i></a>
+            </div>
         </div>
-        <div class="card-body">
-            <a type="button" class="btn btn-info no-print" onclick="window.print()">CETAK
-                <i class="fas fa-print"></i></a>
-        </div>
+
     </div>
 </div>
 
