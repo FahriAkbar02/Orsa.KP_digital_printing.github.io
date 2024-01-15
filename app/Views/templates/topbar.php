@@ -5,7 +5,7 @@
         <i class="fa fa-bars"></i>
     </button>
     <div class="sidebar-brand-text mx-3">
-        <h3 style="text-align: center;">TEMMALUSA ART PAPUA</h3></sup>
+        <h3 class="tart" style="text-align: center;">TEMMALUSA ART PAPUA</h3></sup>
     </div>
 
     <!-- Topbar Navbar -->
@@ -17,7 +17,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php if (logged_in()) : ?>
 
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= user()->username; ?></span>
+                    <span class="mr-2 d-none d-lg-inline text-white-600 small"><?= user()->username; ?></span>
                 <?php endif; ?>
 
                 <img class="img-profile rounded-circle" src="<?= base_url(); ?>/img/default.svg">

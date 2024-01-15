@@ -18,15 +18,15 @@
             <table class="table table-bordered" id="dataTable" cellspacing="0">
                 <thead style="text-align: center;">
                     <tr>
-                        <th>ID Pelanggan</th>
+                        <th>ID Customers</th>
                         <th>Tanggal</th>
-                        <th>Nama Pelanggan</th>
+                        <th>Nama Cutomers</th>
                         <th>Order Cetak</th>
-                        <th>Jenis Cetak</th>
+                        <th>Jenis</th>
                         <th>Ukuran / Size</th>
                         <th>Banyak</th>
                         <th>Total Harga</th>
-                        <th>No.Tlpn / WhatsApp</th>
+                        <th>No.Tlpn/WhatsApp</th>
                         <th class="no-print">Action</th>
 
                     </tr>
@@ -49,8 +49,9 @@
                                     <?php if (logged_in() == true) : ?>
                                         <a class="btn btn-danger" href="<?= base_url('hapus/' . $customer['id']); ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"> <i class="fas fa-trash"></i></a>
                                     <?php endif; ?>
+
                                     <?php if (logged_in() == true) : ?>
-                                        <a class="btn btn-primary " href="<?= base_url('printPerID/' . $customer['id']); ?>" onclick="return confirm(' Melakukan Cetak Bukti Transaksi?')"><i class="fa fa-print"></i></a>
+                                        <a class="btn btn-secondary " href="<?= base_url('printPerID/' . $customer['id']); ?>" onclick="return confirm(' Melakukan Cetak Bukti Transaksi?')"><i class="fa fa-print"></i></a>
                                     <?php endif; ?>
 
                                 </td>

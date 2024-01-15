@@ -7,7 +7,6 @@
         <div class="sidebar-brand-text mx-3">Digital Printing </sup></div>
     </a>
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
 
     <li class="nav-item ">
         <a class="nav-link" href="<?= base_url('note'); ?>">
@@ -20,9 +19,6 @@
             <i class="fas fa-sticky-note"></i>
             <span>Data Pelanggan</span></a>
     </li>
-
-
-
     <!-- Nav Item - Dashboard -->
     <?php if (in_groups('admin')) : ?>
         <hr class="sidebar-divider">
@@ -38,9 +34,6 @@
     <!-- batas custumor - admin -->
     <!-- Customers -->
     <hr class="sidebar-divider my-0">
-    <hr class="sidebar-divider">
-
-
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">

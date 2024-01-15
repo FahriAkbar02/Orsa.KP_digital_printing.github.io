@@ -3,6 +3,13 @@
 <div>
     <div class="container-fluid">
         <div class="container mt-5">
+            <div class="text-center mb-4">
+                <!-- Logo Toko -->
+                <img class="img-responsive" src="<?= base_url() ?>/img/logo/T-Art Papua.png" height="100" style="margin-bottom: 20px;" alt="">
+                <h4>Temmalusa Art Papua</h4>
+                <p>Jl. Sujarwo Condronegoro SH, Manokwari Bar., Kec. Manokwari Barat, Depan Yapis <br>
+                    No. Telepon, Email</p>
+            </div>
             <h2 class="mb-4">Ringkasan Laporan Cetak</h2>
             <?php foreach ($itemSummary as $item) : ?>
                 <div class="card mb-3">
