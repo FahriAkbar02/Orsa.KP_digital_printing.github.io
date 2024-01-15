@@ -86,8 +86,7 @@
 
             <?php endforeach; ?>
             <div class="card-body">
-                <a type="button" class="btn btn-info no-print" onclick="window.print()">CETAK
-                    <i class="fas fa-print"></i></a>
+                <a type="button" class="btn btn-info no-print" onclick="window.print()">CETAK</i></a>
             </div>
         </div>
 
