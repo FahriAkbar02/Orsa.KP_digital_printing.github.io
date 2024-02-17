@@ -5,16 +5,16 @@
         </a>
     </div>
 
-    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+    <div class="navbar-nav-right d-flex align-items-center " id="navbar-collapse">
         <!-- Search -->
         <div class="navbar-nav align-items-center">
             <div class="nav-item d-flex align-items-center">
                 <h3 class="tart" style="text-align: center;">TEMMALUSA ART PAPUA</h3></sup>
             </div>
         </div>
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
+        <ul class="navbar-nav flex-row align-items-center ms-auto  ">
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow  " href="javascript:void(0);" data-bs-toggle="dropdown">
 
                     <div class="avatar avatar-online">
                         <img src="<?= base_url('/uploads/' . user()->user_image); ?>" alt class="w-px-40 h-auto rounded-circle" />

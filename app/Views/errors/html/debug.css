@@ -64,6 +64,7 @@ p.lead {
 }
 .header:hover a {
   display: inline;
+  text-decoration: none;
 }
 
 .footer {
@@ -110,6 +111,7 @@ p.lead {
 }
 .tabs li {
   display: inline;
+  text-decoration: none;
 }
 .tabs a:link,
 .tabs a:visited {

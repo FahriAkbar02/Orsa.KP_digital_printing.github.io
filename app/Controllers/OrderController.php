@@ -5,7 +5,6 @@ namespace App\Controllers;
 use Config\Database;
 use App\Controllers\BaseController;
 use App\Helpers\CustomerIdGenerator;
-use App\Models\Order_Items;
 
 
 

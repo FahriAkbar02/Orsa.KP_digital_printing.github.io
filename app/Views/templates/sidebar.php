@@ -1,4 +1,4 @@
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme no-print">
     <div class="app-brand demo">
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://www.instagram.com/temmalusa_art_papua/">
             <div class="sidebar-brand-icon ">

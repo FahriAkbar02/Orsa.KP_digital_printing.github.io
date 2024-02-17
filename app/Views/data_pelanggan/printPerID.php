@@ -62,7 +62,7 @@
                         </div>
                         <h6>Terima kasih telah berbelanja dengan kami!</h6>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body  no-print">
                         <button class="btn btn-primary no-print" onclick="window.print()">Cetak Bukti</button>
                         <a class="btn btn-secondary no-print" type="button" href="<?= base_url('laporan') ?>">Kembali</a>
                     </div>

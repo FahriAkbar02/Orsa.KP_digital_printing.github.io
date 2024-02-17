@@ -22,7 +22,6 @@ use PhpParser\Node\Stmt\Echo_;
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?= base_url(); ?>/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,10 +39,10 @@ use PhpParser\Node\Stmt\Echo_;
 </head>
 
 <body>
-    <div class="layout-wrapper layout-content-navbar">
-        <div class="layout-container">
+    <div class="layout-wrapper layout-content-navbar  ">
+        <div class="layout-container ">
             <?= $this->include('templates/sidebar'); ?>
-            <div class="layout-page">
+            <div class="layout-page ">
                 <?= $this->include('templates/topbar'); ?>
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y">
@@ -51,7 +50,7 @@ use PhpParser\Node\Stmt\Echo_;
                             <?= $this->renderSection('page-content'); ?>
                         </div>
                     </div>
-                    <footer class="sticky-footer  no-print">
+                    <footer class="sticky-footer no-print ">
                         <div class="container my-auto">
                             <div class="copyright text-center my-auto">
                                 <span class="Copyright">Copyright &copy; <?= date('Y') ?> Design By
@@ -70,9 +69,7 @@ use PhpParser\Node\Stmt\Echo_;
         </div>
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
