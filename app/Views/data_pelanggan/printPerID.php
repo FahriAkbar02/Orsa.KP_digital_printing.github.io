@@ -20,14 +20,17 @@
                 </div>
 
                 <div class="mb-3">
-                    <h4>Detail Pelanggan</h4>
-                    <p>ID Pelanggan : <?= $order['id_pelanggan'] ?? 'N/A' ?></p>
-                    <p>Nama Pelanggan : <?= $order['nama_pelanggan'] ?? 'N/A' ?></p>
-                    <p>No.Telepon / WA : <?= $order['no_tlpn'] ?? 'N/A' ?></p>
+                    <h5>Detail Pelanggan :</h5>
+                    <br>
+                    <h7>ID Pelanggan : <?= $order['id_pelanggan'] ?? 'N/A' ?></h7>
+                    <br>
+                    <h7>Nama pelanggan : <?= $order['nama_pelanggan'] ?? 'N/A' ?></h7>
+                    <br>
+                    <h7>No.Telepon / WA : <?= $order['no_tlpn'] ?? 'N/A' ?></h7>
                 </div>
 
                 <div class="mb-3">
-                    <h4>Detail Transaksi</h4>
+                    <h5>Detail Transaksi :</h5>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered" cellspacing="0">
@@ -57,10 +60,11 @@
                                 </tbody>
                             </table>
                         </div>
-                        <h5>Terima kasih telah berbelanja dengan kami!</h5>
+                        <h6>Terima kasih telah berbelanja dengan kami!</h6>
                     </div>
                     <div class="card-body">
                         <button class="btn btn-primary no-print" onclick="window.print()">Cetak Bukti</button>
+                        <a class="btn btn-secondary no-print" type="button" href="<?= base_url('laporan') ?>">Kembali</a>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,8 @@
 use PhpParser\Node\Stmt\Echo_;
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/" data-template="vertical-menu-template-free">
+
 
 <head>
 
@@ -23,56 +24,52 @@ use PhpParser\Node\Stmt\Echo_;
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/demo.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
+    <link rel="stylesheet" href="<?= base_url(); ?>/vendor/libs/apex-charts/apex-charts.css" />
+    <script src="<?= base_url(); ?>/vendor/js/helpers.js"></script>
+    <script src="<?= base_url(); ?>/js/config.js"></script>
 
 </head>
 
-<body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <?= $this->include('templates/sidebar'); ?>
-        <!-- End of Sidebar -->
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
+<body>
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <?= $this->include('templates/sidebar'); ?>
+            <div class="layout-page">
                 <?= $this->include('templates/topbar'); ?>
-
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <?= $this->renderSection('page-content'); ?>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer  no-print">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span class="Copyright">Copyright &copy; <?= date('Y') ?> Design By
-                            <a href="https://www.instagram.com/fahri_akbarras/" class="text-balck me-4">
-                                <i class="fab fa-instagram"> @fahri_akbarras</i>
-                            </a>
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row">
+                            <?= $this->renderSection('page-content'); ?>
+                        </div>
                     </div>
+                    <footer class="sticky-footer  no-print">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span class="Copyright">Copyright &copy; <?= date('Y') ?> Design By
+                                    <a href="https://www.instagram.com/fahri_akbarras/" class="text-black me-3">
+                                        <p> <i class="fa-brands fa-square-instagram"></i> @fahri_akbarras
+                                        </p>
+
+
+                                    </a>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="content-backdrop fade"></div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
+            </div>
         </div>
-        <!-- End of Content Wrapper -->
-
+        <div class="layout-overlay layout-menu-toggle"></div>
     </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
@@ -87,7 +84,7 @@ use PhpParser\Node\Stmt\Echo_;
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Logout" di bawah jika Anda siap untuk mengakhiri sesi Anda saat ini.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="<?= base_url('logout') ?>">Logout</a>
@@ -114,13 +111,30 @@ use PhpParser\Node\Stmt\Echo_;
     <script src="<?= base_url(); ?>/js/demo/chart-area-demo.js"></script>
     <script src="<?= base_url(); ?>/js/demo/chart-pie-demo.js"></script>
     <!-- Page level plugins -->
-    <script src="<?= base_url(); ?>/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="<?= base_url(); ?>/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
 
     <!-- Page level custom scripts -->
     <script src="<?= base_url(); ?>/js/demo/datatables-demo.js"></script>
     <script src="<?= base_url(); ?>/js/Hide.js"></script>
+    <script src="<?= base_url(); ?>/vendor/libs/jquery/jquery.js"></script>
+    <script src="<?= base_url(); ?>/vendor/libs/popper/popper.js"></script>
+    <script src="<?= base_url(); ?>/vendor/js/bootstrap.js"></script>
+    <script src="<?= base_url(); ?>/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
+    <script src="<?= base_url(); ?>/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="<?= base_url(); ?>/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="<?= base_url(); ?>/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="<?= base_url(); ?>/js/dashboards-analytics.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 </body>
 

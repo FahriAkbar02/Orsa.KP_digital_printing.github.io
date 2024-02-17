@@ -113,6 +113,7 @@ p.lead {
 }
 .tabs a:link,
 .tabs a:visited {
+  text-decoration: none;
   padding: 0rem 1rem;
   line-height: 2.7;
   text-decoration: none;
@@ -123,10 +124,12 @@ p.lead {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   display: inline-block;
+  text-decoration: none;
 }
 .tabs a:hover {
   background: var(--light-bg-color);
   border-color: rgba(0, 0, 0, 0.15);
+  text-decoration: none;
 }
 .tabs a.active {
   background: var(--main-bg-color);

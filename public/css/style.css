@@ -19,11 +19,22 @@
     display: none;
   }
 }
+.input-group {
+  margin-bottom: 0;
+}
+
+.input-group-append {
+  margin-left: -1px;
+}
+
+.btn-outline-secondary i {
+  padding: 0 10px;
+}
 .Copyright {
   color: #000;
 }
 .tart {
-  color: #fff;
+  color: #32383b;
 }
 .heading1 h2 {
   line-height: normal;
@@ -74,7 +85,6 @@
 }
 .sidebar-brand-icon {
   display: none;
-  padding: 10px 10px;
   display: flex;
 }
 img {
@@ -91,6 +101,7 @@ img {
 .table_format.strp table {
   border-radius: 8px 8px 0 0;
   overflow: hidden;
+
   color: #666;
 }
 

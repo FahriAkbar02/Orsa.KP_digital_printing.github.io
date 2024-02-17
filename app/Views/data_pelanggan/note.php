@@ -66,18 +66,12 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    function formatNumberToIndonesianCurrency(value) {
-        return value.toString().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+<script>
+    document.getElementById('price').addEventListener('input', function(e) {
+        var value = this.value.replace(/\D/g, ''); // Menghapus semua selain angka
+        value = value.replace(/\B(?=(\d{3})+(?!\d))/g, "."); // Menambahkan titik sebagai pemisah ribuan
 
-    window.addEventListener('DOMContentLoaded', (event) => {
-        const priceInput = document.getElementById('price');
-
-        priceInput.addEventListener('input', function(e) {
-            const formattedValue = formatNumberToIndonesianCurrency(this.value);
-            this.value = formattedValue;
-        });
+        this.value = value;
     });
 </script>
 
