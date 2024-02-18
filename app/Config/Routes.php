@@ -18,8 +18,6 @@ $routes->get('/admin/edit/(:num)', 'Admin::edit/$1');
 $routes->post('/admin/editUserAndGroup/(:num)', 'Admin::editUserAndGroup/$1');
 
 
-$routes->get('/forgot', 'User::forgot');
-$routes->get('/reset', 'User::reset');
 $routes->get('/user', 'User::index');
 
 $routes->get('/user/edit/(:num)', 'User::editProfile/$1');

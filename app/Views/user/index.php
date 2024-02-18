@@ -25,9 +25,11 @@
                            </li>
                         <?php endif; ?>
                         <li class="list-group-item"><?= user()->email; ?></li>
+                        <li class="list-group-item">
+                           <span class="badge badge-<?= (implode(', ', $roles) == 'admin') ? 'success' : 'warning' ?>"><?= implode(', ', $roles) ?></span>
+                        </li>
 
                      </ul>
-                     <!-- Tambahkan tautan edit -->
                      <a class="dropdown-item" href="<?= base_url('user/edit/' . user()->id) ?>">
                         <i class="fas Example of cog fa-cog  fa-sm fa-fw mr-2 text-gray-400"></i>
                         Edit Profile

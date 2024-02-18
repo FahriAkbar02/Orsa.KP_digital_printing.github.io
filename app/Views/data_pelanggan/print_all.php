@@ -7,15 +7,12 @@
             <div class="card-body p-0 no-print">
                 <form action="<?= site_url('/cari-data'); ?>" method="get">
                     <div class="row mb-3">
-                        <!-- Search Field -->
                         <div class="col">
-                            <div class="input-group">
-                                <div class="input-group-prepend ">
-                                    <button type="submit">
-                                        <span class="input-group-text"><i class="fas fa-search"></i></span>
-                                    </button>
+                            <div class="input-group mb-3">
+                                <input type="search" name="item_name" id="searchField" class="form-control" placeholder="Search by Item Name .." aria-label="Search by name">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
-                                <input type="search" name="item_name" id="item_name" class="form-control" placeholder="Search by Item Name" aria-label="Search by name">
                             </div>
                         </div>
                     </div>

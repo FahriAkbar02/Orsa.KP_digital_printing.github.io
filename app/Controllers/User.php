@@ -17,18 +17,47 @@ class User extends BaseController
         $this->groupData = $this->db->table('auth_groups_users');
     }
 
-    public function index(): string
+    // Di dalam controller atau di tempat lain yang sesuai
+    public function index()
     {
+        // Ambil objek pengguna yang sedang login
+        $user = user();
 
-        $this->builder->select('users.id as userid, username, email, fullname, user_image, name');
-        $this->builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
-        $this->builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
-        $query = $this->builder->get();
+        // Cek apakah pengguna sedang login
+        if ($user) {
+            // Ambil email dan username pengguna langsung dari objek pengguna
+            $email = $user->email;
+            $username = $user->username;
 
-        $data['users'] = $query->getResult();
+            // Ambil peran (role) pengguna dari tabel auth_groups
+            $groupsModel = new \Myth\Auth\Models\GroupModel();
+            $groups = $groupsModel->getGroupsForUser($user->id);
 
-        return view('user/index', $data);
+            // Inisialisasi array untuk menampung nama peran (role)
+            $roles = [];
+            // Loop melalui setiap peran pengguna dan tambahkan nama peran ke array roles
+            foreach ($groups as $group) {
+                // Pastikan $group adalah objek sebelum mengakses properti name
+                if (is_object($group)) {
+                    $roles[] = $group->name;
+                } elseif (is_array($group) && isset($group['name'])) {
+                    // Jika $group adalah array, pastikan properti name tersedia sebelum mengaksesnya
+                    $roles[] = $group['name'];
+                }
+            }
+            // Tampilkan data pengguna di view
+            return view('user/index', [
+                'email' => $email,
+                'username' => $username,
+                'roles' => $roles,
+            ]);
+        } else {
+            // Jika pengguna tidak login, redirect atau lakukan sesuatu yang sesuai
+        }
     }
+
+
+
     public function editProfile($id)
     {
         // Ambil data user berdasarkan ID
