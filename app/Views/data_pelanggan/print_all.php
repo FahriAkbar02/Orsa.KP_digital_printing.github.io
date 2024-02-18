@@ -3,14 +3,14 @@
 <div>
     <div class="container-fluid">
         <div class="container mt-5">
-            <h3 style="text-align: center;" class="mb-4">Ringkasan Laporan Cetak <br>Temmalusa Art </h3>
+            <h3 style="text-align: center;" class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span>Ringkasan Laporan Cetak <br>Temmalusa Art </h3>
             <div class="card-body p-0 no-print">
                 <form action="<?= site_url('/cari-data'); ?>" method="get">
                     <div class="row mb-3">
                         <!-- Search Field -->
                         <div class="col">
                             <div class="input-group">
-                                <div class="input-group-prepend no-print">
+                                <div class="input-group-prepend ">
                                     <button type="submit">
                                         <span class="input-group-text"><i class="fas fa-search"></i></span>
                                     </button>
@@ -31,11 +31,11 @@
                         </div>
                     </div>
                 </form>
-            </div>
-            <div class="card-body ">
-                <button class="btn btn-info no-print">
-                    <a type="button" onclick="window.print()">Print <i class="fa-solid fa-print "></i></a></button>
-                <a class="btn btn-secondary no-print" type="button " href="<?= base_url('laporan') ?> ">Kembali</a>
+                <div class="card-body ">
+                    <button class="btn btn-info ">
+                        <a onclick="window.print()">Print </a></button>
+                    <a class="btn btn-outline-secondary " href="<?= base_url('laporan') ?>">Kembali</a>
+                </div>
             </div>
             <div class="card mb-3">
                 <div class="card-body">
@@ -98,7 +98,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 

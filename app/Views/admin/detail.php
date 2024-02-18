@@ -3,7 +3,8 @@
 <?= $this->section('page-content'); ?>
 
 <div class="container-fluid">
-  <h3 class="h3- mb-4 text-gray-800">User Details</h3>
+  <h3 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> User Details</h3>
+
   <div class="row">
     <div class="col-lg-8">
       <div class="card mb-3" style="max-width: 540px;">

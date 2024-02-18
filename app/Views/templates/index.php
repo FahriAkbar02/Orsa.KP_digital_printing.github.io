@@ -57,8 +57,6 @@ use PhpParser\Node\Stmt\Echo_;
                                     <a href="https://www.instagram.com/fahri_akbarras/" class="text-black me-3">
                                         <p> <i class="fa-brands fa-square-instagram"></i> @fahri_akbarras
                                         </p>
-
-
                                     </a>
                             </div>
                         </div>

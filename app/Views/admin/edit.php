@@ -12,7 +12,8 @@
                         <div class="col-lg">
                             <div class="p-5"> <!-- Contoh sederhana dari form edit (app/Views/admin/edit.php) -->
                                 <div class="text-center">
-                                    <h2>Edit User Role</h2>
+                                    <h3 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Edit User Role</h3>
+
                                 </div>
                                 <!-- Tampilkan pesan error atau konfirmasi jika ada -->
                                 <?php if (session()->has('errors')) : ?>

@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="content-wrapper">
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Account Settings /</span> Account</h4>
+            <h3 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Manage Profile</h3>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card mb-4">
@@ -18,9 +18,10 @@
                                     <img src="<?= base_url('uploads/' . $user->user_image); ?>" alt="user-avatar" class="d-block rounded" height="100" width="100" id="uploadedAvatar" />
                                     <div class="button-wrapper">
                                         <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
-                                            <span class=" d-sm-block">Upload Photo</span>
                                             <i class="bx bx-upload d-block d-sm-none"></i>
                                             <input type="file" id="upload" class="account-file-input" name="user_image" hidden accept="image/png, image/jpeg" />
+                                            <span class="d-sm-block">Upload Photo</span>
+
                                         </label>
 
 

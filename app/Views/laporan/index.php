@@ -3,7 +3,7 @@
 <?= $this->section('page-content'); ?>
 
 <div class="container-fluid">
-    <h3 class="h3- mb-4 text-gray-800">Data Pelanggan</h3>
+    <h3 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Data Pelanggan</h3>
     <!-- Page Heading -->
     <!-- DataTales Example -->
     <div class="SOP">
