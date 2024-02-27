@@ -47,4 +47,8 @@ class DP_Orders_item extends Model
     {
         return $this->orderBy('created_at', 'DESC')->findAll(); // atau 'created_at' jika itu yang Anda gunakan
     }
+    public function getCustomerByName($name)
+    {
+        return $this->like('nama_pelanggan', $name)->findAll();
+    }
 }

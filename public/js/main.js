@@ -14,7 +14,7 @@ let menu, animate;
   layoutMenuEl.forEach(function (element) {
     menu = new Menu(element, {
       orientation: 'vertical',
-      closeChildren: false
+      closeChildren: false,
     });
     // Change parameter to true if you want scroll animation
     window.Helpers.scrollToActive((animate = false));
@@ -23,8 +23,8 @@ let menu, animate;
 
   // Initialize menu togglers and bind click on each
   let menuToggler = document.querySelectorAll('.layout-menu-toggle');
-  menuToggler.forEach(item => {
-    item.addEventListener('click', event => {
+  menuToggler.forEach((item) => {
+    item.addEventListener('click', (event) => {
       event.preventDefault();
       window.Helpers.toggleCollapsed();
     });

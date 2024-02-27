@@ -35,9 +35,14 @@
                                     <div class="row">
                                         <input type="hidden" name="id" value="<?= $user->id; ?>">
                                         <div class="mb-3 col-md-6">
+                                            <label for=" username" class="form-label">Fullname</label>
+                                            <input class="form-control" type="text" id="fullname" name="fullname" value="<?= old('fullname', $user->fullname); ?>" autofocus />
+                                        </div>
+                                        <div class="mb-3 col-md-6">
                                             <label for=" username" class="form-label">Username</label>
                                             <input class="form-control" type="text" id="username" name="username" value="<?= old('username', $user->username); ?>" autofocus />
                                         </div>
+
                                         <div class="mb-3 col-md-6">
                                             <label for="email" class="form-label">E-mail</label>
                                             <input class="form-control" type="email" id="email" name="email" value="<?= old('email', $user->email); ?>" />

@@ -17,6 +17,7 @@ use PhpParser\Node\Stmt\Echo_;
     <title>Temmalusa Art Papua</title>
     <link rel="icon" type="jpg/png" href="<?= base_url(); ?>/img/logo/T-Art Papua.png">
     <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="<?= base_url(); ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -68,48 +69,7 @@ use PhpParser\Node\Stmt\Echo_;
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
 
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" di bawah jika Anda siap untuk mengakhiri sesi Anda saat ini.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="<?= base_url('logout') ?>">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript-->
-
-    <script src="<?= base_url(); ?>vendor/jquery/jquery.min.js"></script>
-    <script src="<?= base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="<?= base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="<?= base_url(); ?>/js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="<?= base_url(); ?>/vendor/chart.js/Chart.min.js"></script>
-
     <!-- Page level custom scripts -->
-    <script src="<?= base_url(); ?>/js/demo/chart-area-demo.js"></script>
-    <script src="<?= base_url(); ?>/js/demo/chart-pie-demo.js"></script>
-    <!-- Page level plugins -->
-
-
-    <!-- Page level custom scripts -->
-    <script src="<?= base_url(); ?>/js/demo/datatables-demo.js"></script>
     <script src="<?= base_url(); ?>/js/Hide.js"></script>
     <script src="<?= base_url(); ?>/vendor/libs/jquery/jquery.js"></script>
     <script src="<?= base_url(); ?>/vendor/libs/popper/popper.js"></script>
@@ -126,7 +86,34 @@ use PhpParser\Node\Stmt\Echo_;
     <script src="<?= base_url(); ?>/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="<?= base_url(); ?>/js/dashboards-analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function confirmLogout() {
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: "btn btn-success",
+                    cancelButton: "btn btn-danger"
+                },
+                buttonsStyling: false
+            });
+            swalWithBootstrapButtons.fire({
+                title: "Siap untuk Keluar ? ",
+                text: " Pilih 'Ya' di bawah, jika Anda siap untuk mengakhiri sesi Anda saat ini!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Ya!",
+                cancelButtonText: "Tidak!",
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Lakukan penghapusan jika dikonfirmasi
+                    window.location.href = "<?= base_url('logout/'); ?>";
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    // Tidak melakukan apa pun jika dibatalkan
+                }
+            });
+        }
+    </script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

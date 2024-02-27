@@ -40,7 +40,7 @@
                                     <!-- Tambahkan field lainnya sesuai kebutuhan -->
 
                                     <div class="from-group">
-                                        <label for="group">Group:</label>
+                                        <label for="group">Group / Role:</label>
                                         <select class="form-control" name="group_id" id="group">
                                             <?php foreach ($groups as $group) : ?>
                                                 <option value="<?= $group->id ?>" <?= (isset($user->group_id) && $group->id == $user->group_id) ? 'selected' : '' ?>>
@@ -52,7 +52,7 @@
 
                                     </div>
                                     <div class="from-group">
-                                        <label for="group">Group:</label>
+                                        <label for="group">Group Name:</label>
                                         <select class="form-control" name="group_description" id="group">
                                             <?php foreach ($groups as $group) : ?>
                                                 <option value="<?= $group->id ?>" <?= (isset($user->description) && $group->id == $user->description) ? 'selected' : '' ?>>
@@ -61,15 +61,10 @@
 
                                             <?php endforeach; ?>
                                         </select>
-
                                     </div>
 
-                                    <!-- <div class="from-group">
-                                        <label for="group_description">Group Description:</label>
-                                        <input type="text" id="group_description" name="group[description]" value="<?= $group->description ?>">
-                                    </div> -->
-
-                                    <button class="btn btn-primary" type="submit">Simpan</button>
+                                    <br>
+                                    <button class="btn btn-primary" type="button" onclick="confirmSimpan()">Simpan</button>
                                     <a class="btn btn-outline-secondary" type="button" href="<?= base_url('admin') ?>">Kembali</a>
                                 </form>
 
@@ -81,4 +76,32 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function confirmSimpan() {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+        swalWithBootstrapButtons.fire({
+            title: "Simpan Perubahan?",
+            text: "Pilih 'Ya' dibawah, Jika Anda Setuju!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Ya, simpan!",
+            cancelButtonText: "Tidak, batal!",
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Submit form secara programmatic
+                document.querySelector('form').submit();
+            }
+        });
+    }
+</script>
+
 <?= $this->endSection('page-content'); ?>

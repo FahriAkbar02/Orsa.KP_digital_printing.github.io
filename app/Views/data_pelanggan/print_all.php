@@ -29,9 +29,9 @@
                     </div>
                 </form>
                 <div class="card-body ">
-                    <button class="btn btn-info ">
-                        <a onclick="window.print()">Print </a></button>
-                    <a class="btn btn-outline-secondary " href="<?= base_url('laporan') ?>">Kembali</a>
+                    <button class="btn btn-info " onclick="window.print()">
+                        Print</button>
+                    <a class="btn btn-outline-secondary " href="<?= base_url('pelanggan') ?>">Kembali</a>
                 </div>
             </div>
             <div class="card mb-3">
@@ -98,7 +98,4 @@
     </div>
 </div>
 
-
-<!-- Bootstrap JS, Popper.js, and jQuery -->
-<script src="path_to_bootstrap_js"></script>
 <?= $this->endSection('page-content'); ?>

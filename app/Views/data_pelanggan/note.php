@@ -74,8 +74,4 @@
         this.value = value;
     });
 </script>
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <?= $this->endSection('page-content'); ?>

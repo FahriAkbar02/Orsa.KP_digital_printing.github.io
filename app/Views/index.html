@@ -1,79 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nota Transaksi</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        @media print {
-            .no-print {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="text-center mb-4">
-                    <!-- Logo Toko -->
-                    <img src="path_to_your_logo.png" alt="Logo Toko" height="100">
-                    <p>Temmalusa Art Papua</h2>
-                        <p>Jl. Sujarwo Condronegoro SH, Manokwari Bar., Kec. Manokwari Barat, Depan Yapis <br> 
-                            No. Telepon, Email</p>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swal with Bootstrap Buttons</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- Your HTML content goes here -->
 
-                <!-- Tanggal -->
-                <div class="text-right mb-2">
-                    <p>Tanggal:  <?= $transaction['tanggal'] ?></p>
-                </div>
+    <!-- Include SweetAlert2 and its dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-                <div class="mb-3">
-                    <h4>Detail Pelanggan</h4>
-                    <p>Nama Pelanggan   : <?= $transaction['id_pelanggan'] ?></p>
-                     <p>Nama Pelanggan  : <?= $transaction['nama_pelanggan'] ?></p>
-                     <p>No.Telepon / WA : <?= $transaction['no_tlpn'] ?></p>
-                </div>
+    <script>
+      // Your JavaScript code goes here
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger',
+        },
+        buttonsStyling: false,
+      });
 
-                <div class="mb-3">
-                    <h4>Detail Transaksi</h4>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Item</th>
-                                <th>Quantity</th>
-                                <th>Harga Satuan</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($transaction['items'] as $item): ?>
-                            <tr>
-                                <td><?= $transaction['jenis_produk'] ?></td>
-                                <td><?= $transaction['jumlah'] ?></td>
-                                <td><input type="text" ></td>
-                                <td><input type="text" ></td>
-                            </tr>
-                            <?php endforeach; ?>
-                            <tr>
-                                <td colspan="3" class="text-right"><strong>Total:</strong></td>
-                                <td><strong><input type="text" ></strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p>Terima kasih telah berbelanja dengan kami!</p>
-
-                <button class="btn btn-primary no-print" onclick="window.print()">Cetak Nota</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+      swalWithBootstrapButtons
+        .fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, delete it!',
+          cancelButtonText: 'No, cancel!',
+          reverseButtons: true,
+        })
+        .then((result) => {
+          if (result.isConfirmed) {
+            swalWithBootstrapButtons.fire({
+              title: 'Deleted!',
+              text: 'Your file has been deleted.',
+              icon: 'success',
+            });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            swalWithBootstrapButtons.fire({
+              title: 'Cancelled',
+              text: 'Your imaginary file is safe :)',
+              icon: 'error',
+            });
+          }
+        });
+    </script>
+  </body>
 </html>

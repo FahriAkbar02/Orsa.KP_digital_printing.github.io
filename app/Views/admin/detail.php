@@ -4,41 +4,32 @@
 
 <div class="container-fluid">
   <h3 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> User Details</h3>
-
   <div class="row">
-    <div class="col-lg-8">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="<?= base_url('/uploads/' . user()->user_image); ?>" class="img-fluid rounded-start" alt="user-avatar" class="d-block rounded" id="uploadedAvatar">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <h4> <?= $user->username; ?></h4>
-                </li>
-                <?php if ($user->fullname) : ?>
-                  <li class="list-group-item">
-                    <?= $user->fullname; ?>
-                  </li>
-                <?php endif; ?>
-                <li class="list-group-item">
-                  <?= $user->email; ?></li>
-                <li class="list-group-item">
-                  <span class="badge badge-<?= ($user->name == 'admin') ? 'success' : 'warning' ?>"><?= $user->name; ?></span>
-                </li>
-                <li class="list-group-item">
-                  <small><a href="<?= base_url('admin') ?>">&laquo; back to user list</a></small>
-                </li>
-
-              </ul>
+    <div class="container mt-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-7">
+          <div class="card p-3 py-4">
+            <div class="text-center">
+              <img src="<?= base_url('/uploads/' . $user->user_image); ?>" class=" rounded-circle" width="200" alt="<?= user()->user_image; ?>">
+            </div>
+            <div class="text-center mt-3">
+              <span class="bg bg-<?= ($user->name == 'admin') ? 'success' : 'warning' ?> p-1 px-4 rounded text-white"><?= $user->name; ?></span>
+              <h5 class="mt-2 mb-0"> <?= $user->username; ?></h5>
+              <?php if ($user->fullname) : ?>
+                <span>
+                  <?= $user->fullname; ?>
+                </span>
+              <?php endif; ?>
+              <p class="fonts"><?= $user->email; ?></p>
+              <div class="buttons">
+                <a class="btn btn-outline-primary px-4 ms-3" href="<?= base_url('admin') ?>">back to user list
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 <?= $this->endSection('page-content'); ?>

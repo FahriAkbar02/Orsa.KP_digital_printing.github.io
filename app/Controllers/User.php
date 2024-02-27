@@ -83,6 +83,7 @@ class User extends BaseController
         // Ambil data input dari form
         $userImage = $this->request->getFile('user_image');
         $username = $this->request->getPost('username');
+        $fullname = $this->request->getPost('fullname');
         $email = $this->request->getPost('email');
 
         // Periksa apakah email yang dimasukkan sudah ada dalam database untuk pengguna lain
@@ -96,6 +97,7 @@ class User extends BaseController
         // Update data pengguna
         $userData = [
             'username' => $username,
+            'fullname' => $fullname,
             'email' => $email
         ];
 

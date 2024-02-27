@@ -13,12 +13,9 @@
                     <p>Jl. Sujarwo Condronegoro SH, Manokwari Bar., Kec. Manokwari Barat, Depan Yapis <br>
                         No. Telepon, Email</p>
                 </div>
-
-                <!-- Tanggal -->
                 <div class="text-right mb-2">
                     <p>Tanggal: <?= isset($order['created_at']) ? date('d-m-Y', strtotime($order['created_at'])) : 'N/A' ?></p>
                 </div>
-
                 <div class="mb-3">
                     <h5>Detail Pelanggan :</h5>
                     <br>
@@ -28,17 +25,16 @@
                     <br>
                     <h7>No.Telepon / WA : <?= $order['no_tlpn'] ?? 'N/A' ?></h7>
                 </div>
-
                 <div class="mb-3">
                     <h5>Detail Transaksi :</h5>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" cellspacing="0">
+                            <table class="table " border="2" style="text-align: center;">
                                 <thead style="text-align: center;">
                                     <tr>
                                         <th>Item</th>
                                         <th>Ukuran</th>
-                                        <th>Quantity</th>
+                                        <th>Jumlah</th>
                                         <th>Harga Satuan</th>
                                         <th>Total</th>
                                     </tr>
@@ -55,7 +51,6 @@
                                     <tr>
                                         <td colspan="4" class="text-right"><strong>Total Harga:</strong></td>
                                         <td>Rp. <?= isset($totalHarga) ? number_format($totalHarga, 0, ',', '.') : '0' ?></td>
-
                                     </tr>
                                 </tbody>
                             </table>
@@ -70,5 +65,4 @@
             </div>
         </div>
     </div>
-    <!-- External Scripts -->
     <?= $this->endSection('page-content'); ?>

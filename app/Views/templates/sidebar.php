@@ -10,20 +10,17 @@
             <i class="bx bx-chevron-left bx-sm align-middle"></i>
         </a>
     </div>
-
     <div class="menu-inner-shadow"></div>
-
     <ul class="menu-inner py-1">
         <li class="menu-item ">
-            <a href="<?= base_url('note'); ?>" class="menu-link">
-                <i class="menu-icon fas fa-solid fa-plus"></i>
-                <div data-i18n="Analytics">Pesan</div>
+            <a href="<?= base_url('pelanggan'); ?>" class="menu-link">
+                <i class="menu-icon fas fa-user"></i>
+                <div data-i18n="Analytics">Pelanggan</div>
             </a>
         </li>
-
         <li class="menu-item ">
             <a href="<?= base_url('laporan'); ?>" class="menu-link">
-                <i class="menu-icon fas fa-solid fa-sticky-note"></i>
+                <i class="menu-icon fas fa-solid fa-database"></i>
                 <div data-i18n="Analytics">Data</div>
             </a>
         </li>

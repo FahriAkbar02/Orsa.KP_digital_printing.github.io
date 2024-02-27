@@ -118,6 +118,6 @@ class Admin extends BaseController
         // Update user-group relationship
         $this->db->table('auth_groups_users')->where('user_id', $userId)->update(['group_id' => $groupId]);
 
-        return redirect()->to('/admin')->with('message', 'User and group updated successfully');
+        return redirect()->to('/user')->with('message', 'User and group updated successfully');
     }
 }
